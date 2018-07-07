@@ -16,7 +16,7 @@
 
 .fullContainer {
   height: 100%;
-  padding-bottom: 80px;
+  /* padding-bottom: 20px; */
 }
 
 .bottomBtn {
