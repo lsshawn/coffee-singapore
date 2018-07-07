@@ -7,10 +7,6 @@
         <div class="cup mt-3">
           <svg version="1.1" x="0px" y="0px" width="100%" height="150px" viewBox="0 100 501 301" xml:space="preserve">
             <linearGradient id="gradient" x2="0%" y2="100%">
-              <!-- sugar -->
-              <!-- <stop v-if="coffeeTea === 'kopi' && dai === '' && oc === ''" stop-color="#D9D7D7"/> -->
-              <!-- <stop v-if="coffeeTea === 'kopi' && dai === '' && oc === 'c'" offset="20%" stop-color="#fffde5"/> -->
-              
               <!-- c or o -->
               <stop v-if="coffeeTea !== '' && dai === '' && oc === ''" offset="20%" stop-color="#F3B146"/>
               <stop v-if="coffeeTea !== '' && dai === '' && oc === 'c'" offset="20%" stop-color="#fffde5"/>
@@ -113,7 +109,7 @@
 
       <v-flex xs12>
         <v-btn small flat @click.prevent="english = !english" :class="{ 'active': english }">
-          <div class="caption">You first time in Singapore ah?</div>
+          <div class="caption"><em>You first time in Singapore ah?</em></div>
         </v-btn>
       </v-flex>
 
@@ -183,12 +179,10 @@ export default {
     }
   },
   methods: {
-    async sendOrder () {
-      console.log(airtableConfigs)
-      console.log(process.env)
+    sendOrder () {
       const base = 'appArsQGp5U0Ex2BW'
       try {
-        let res = await axios.post(
+        axios.post(
           `https://api.airtable.com/v0/${base}/Table%201?`,
           {
             'fields': {
@@ -197,7 +191,6 @@ export default {
             }
           },
           airtableConfigs)
-        console.log(res)
         this.$router.push('/thankyou')
       } catch (err) {
         console.log(err)

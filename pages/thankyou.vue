@@ -5,7 +5,7 @@
         <div class="display-2">Order sent!</div>
         <br>
         <br>
-        <div class="headline">You wait a while ah...</div>
+        <div class="headline">You wait a while <em>ah</em></div>
       </v-flex>
 
       <v-flex xs12 class="mt-5">
