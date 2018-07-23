@@ -2,9 +2,9 @@
 <div>
   <v-container fluid class="fullContainer px-0">
     <v-layout column text-xs-center>
-      <v-flex xs12 class="mb-3">
+      <v-flex xs12 class="mb-2">
         <h1>What would you like?</h1>
-        <div class="cup mt-3">
+        <div class="cup mt-1">
           <svg version="1.1" x="0px" y="0px" width="100%" height="150px" viewBox="0 100 501 301" xml:space="preserve">
             <linearGradient id="gradient" x2="0%" y2="100%">
               <!-- c or o -->
@@ -108,7 +108,7 @@
       </v-flex>
 
       <v-flex xs12>
-        <v-btn small flat @click.prevent="english = !english" :class="{ 'active': english }">
+        <v-btn small color="brown" outline @click.prevent="english = !english" :class="{ 'active': english }">
           <div class="caption"><em>You first time in Singapore ah?</em></div>
         </v-btn>
       </v-flex>
